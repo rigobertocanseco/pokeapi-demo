@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:gs="http://rigobertocanseco.dev/pokeapi">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <gs:getPokemonRequest>
+            <gs:name>pikachu</gs:name>
+        </gs:getPokemonRequest>
+    </soapenv:Body>
+</soapenv:Envelope>
