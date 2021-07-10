@@ -45,11 +45,6 @@
             <groupId>wsdl4j</groupId>
             <artifactId>wsdl4j</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.rigobertocanseco</groupId>
-            <artifactId>pokeapi-demo</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
     </dependencies>
 
     <build>

@@ -2,8 +2,8 @@
                   xmlns:gs="http://rigobertocanseco.dev/pokeapi">
     <soapenv:Header/>
     <soapenv:Body>
-        <gs:getPokemonRequest>
+        <gs:GetPokemonRequest>
             <gs:name>pikachu</gs:name>
-        </gs:getPokemonRequest>
+        </gs:GetPokemonRequest>
     </soapenv:Body>
 </soapenv:Envelope>

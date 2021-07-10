@@ -14,7 +14,7 @@ import org.springframework.xml.xsd.XsdSchema;
 
 @Configuration
 @EnableWs
-public class WebServiceConfig extends WsConfigurerAdapter {
+public class WebServiceConfig {
     @Bean
     public ServletRegistrationBean<MessageDispatcherServlet> messageDispatcherServlet(ApplicationContext applicationContext) {
         MessageDispatcherServlet servlet = new MessageDispatcherServlet();
