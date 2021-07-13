@@ -3,7 +3,7 @@
     <soapenv:Header/>
     <soapenv:Body>
         <gs:GetIdRequest>
-            <gs:name>picachu</gs:name>
+            <gs:name>pikachu</gs:name>
         </gs:GetIdRequest>
     </soapenv:Body>
 </soapenv:Envelope>
