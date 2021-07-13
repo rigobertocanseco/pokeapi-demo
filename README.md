@@ -2,9 +2,9 @@
 
 1. Diferencia entre interfaz y clase abstracta  
    * Una interfaz solo contiene atributos y métodos abstractos, los cuales no contienen ningún cuerpo, mientras que una clase abstracta puede o no contener métodos abstractos.
-    * Una interfaz solo puede contener métodos abstractos públicos, mentras que en una clase abstracta los métodos pueden ser públicos o protegidos.
+    * Una interfaz solo puede contener métodos abstractos públicos, mientras que en una clase abstracta los métodos pueden ser públicos o protegidos.
    * Una clase abstracta solo puede heredar de una clase mientras que una interfaz puede extender de más de una.
-   * Una clase abstracta puede extender o implementar cualquier clase, mientras que una interfaz solomente puede extender o implementar otras interfaces.  
+   * Una clase abstracta puede extender o implementar cualquier clase, mientras que una interfaz solamente puede extender o implementar otras interfaces.  
 2. Diferencia entre LinkedList y ArrayList
    * ArrayList internamente utiliza un array dinámico mientras que una LinkedList internamente utiliza una lista doblemente ligada.
    * Un ArrayList es mejor para almacenar y acceder a datos, mientras que LinkedList es mejor para manipular datos.
