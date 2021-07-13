@@ -1,4 +1,7 @@
-package com.rigobertocanseco.pokeapidemo.client;
+package com.rigobertocanseco.pokeapidemo.client.entity;
+
+import com.rigobertocanseco.pokeapidemo.client.entity.Ability;
+import com.rigobertocanseco.pokeapidemo.client.entity.Held;
 
 import java.util.ArrayList;
 
@@ -30,11 +33,11 @@ public class PokemonResponse {
         this.abilities = abilities;
     }
 
-    public Integer getBase_experience() {
+    public Integer getBaseExperience() {
         return base_experience;
     }
 
-    public void setBase_experience(Integer baseExperience) {
+    public void setBaseExperience(Integer baseExperience) {
         this.base_experience = baseExperience;
     }
 
@@ -54,19 +57,19 @@ public class PokemonResponse {
         this.name = name;
     }
 
-    public ArrayList<Held> getHeld_items() {
+    public ArrayList<Held> getHeldItems() {
         return held_items;
     }
 
-    public void setHeld_items(ArrayList<Held> held_items) {
+    public void setHeldItems(ArrayList<Held> held_items) {
         this.held_items = held_items;
     }
 
-    public String getLocation_area_encounters() {
+    public String getLocationAreaEncounters() {
         return location_area_encounters;
     }
 
-    public void setLocation_area_encounters(String location_area_encounters) {
+    public void setLocationAreaEncounters(String location_area_encounters) {
         this.location_area_encounters = location_area_encounters;
     }
 

@@ -1,4 +1,4 @@
-package com.rigobertocanseco.pokeapidemo.client;
+package com.rigobertocanseco.pokeapidemo.client.entity;
 
 import java.util.ArrayList;
 
@@ -22,11 +22,11 @@ public class Held {
         this.item = item;
     }
 
-    public ArrayList<VersionDetail> getVersion_details() {
+    public ArrayList<VersionDetail> getVersionDetails() {
         return version_details;
     }
 
-    public void setVersion_details(ArrayList<VersionDetail> version_details) {
+    public void setVersionDetails(ArrayList<VersionDetail> version_details) {
         this.version_details = version_details;
     }
 

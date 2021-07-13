@@ -1,4 +1,4 @@
-package com.rigobertocanseco.pokeapidemo.client;
+package com.rigobertocanseco.pokeapidemo.client.entity;
 
 public class VersionDetail {
     private Integer rarity;

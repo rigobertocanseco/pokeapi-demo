@@ -1,6 +1,10 @@
 package com.rigobertocanseco.pokeapidemo.client;
 
 import com.google.gson.Gson;
+import com.rigobertocanseco.pokeapidemo.client.entity.Ability;
+import com.rigobertocanseco.pokeapidemo.client.entity.Held;
+import com.rigobertocanseco.pokeapidemo.client.entity.PokemonResponse;
+import com.rigobertocanseco.pokeapidemo.client.entity.VersionDetail;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -17,40 +21,25 @@ public class PokeAPIClient {
     public final String URI = "https://pokeapi.co/api/v2/pokemon/";
     private final CloseableHttpClient httpClient = HttpClients.createDefault();
 
-    public void close() throws IOException {
-        httpClient.close();
+    public void close() {
+        try {
+            httpClient.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public PokemonResponse sendGet(String pokemon) throws Exception {
         HttpGet request = new HttpGet(URI + pokemon);
-
+        PokemonResponse pokemonResponse = new PokemonResponse();
         try (CloseableHttpResponse response = httpClient.execute(request)) {
-            logger.info(response.getStatusLine().toString());
-
             HttpEntity entity = response.getEntity();
-            Header headers = entity.getContentType();
-            logger.info(headers.toString());
-
-            if (entity != null) {
-                String result = EntityUtils.toString(entity);
-                Gson gson = new Gson();
-                PokemonResponse pokemonResponse = gson.fromJson(result, PokemonResponse.class);
-                logger.info(pokemonResponse.getName());
-                logger.info(pokemonResponse.getId().toString());
-                logger.info(pokemonResponse.getBase_experience().toString());
-                logger.info(pokemonResponse.getLocation_area_encounters());
-
-                for (Ability ability:pokemonResponse.getAbilities()) {
-                    logger.info(ability.toString());
-                }
-
-                for (Held held: pokemonResponse.getHeld_items()) {
-                    for (VersionDetail version: held.getVersion_details()) {
-                        logger.info(version.toString());
-                    }
-                    logger.info(held.getItem().toString());
-                }
-
+            String result = EntityUtils.toString(entity);
+            Gson gson = new Gson();
+            logger.info("REQUEST: " + request);
+            logger.info("RESPONSE: " + response);
+            if (response.getStatusLine().getStatusCode() == 200) {
+                pokemonResponse = gson.fromJson(result, PokemonResponse.class);
                 return pokemonResponse;
             }
         }
